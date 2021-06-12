@@ -30,8 +30,12 @@ void print(Array& array){
 void initArray (Array& array, int cap){
     //Init a new array with capacity equals to cap
     //TODO
-    array.arr=new Soldier[cap];
-    array.capacity=cap;
+    if(cap<10){
+        array.capacity=10;
+    } else {
+        array.capacity=cap;
+    }
+    array.arr=new Soldier[array.capacity];
     return;
 }
 
